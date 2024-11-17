@@ -7,11 +7,12 @@
 
   <title>Ahoi.</title>
 
+  <!--
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/normalize-8.0.1.css">
-  <!--<link rel="stylesheet" href="/css/modern-normalize-3.0.1.css">-->
-  <!--<link rel="stylesheet" href="/css/sanitize-13.0.0.css">-->
   <link rel="stylesheet" href="/css/ahoi.css">
+  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <meta name="description" content="">
 
   <meta property="og:title" content="">
@@ -30,27 +31,39 @@
 
 <body>
   <header>
-    <div>
-      <a href="/" aria-label="Zur Startseite"><img src="/img/Logo.png" alt=""></a>
-    </div>
 
-    <div>
-      <nav>
-        <ul>
-          <li><a href="#">Bücher</a></li>
-          <li><a href="#">Vinyls</a></li>
-          <!-- <li><a href="#">Brettspiele</a></li> -->
-        </ul>
-      </nav>
-    </div>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a href="/" aria-label="Zur Startseite" class="navbar-brand">
+          <img src="/img/anchor-svgrepo-com.svg" alt="" width="32" height="32">
+          Ahoi.
+        </a>
 
-    <div>
-      <form>
-        <label>
-          <input type="text" placeholder="Volltextsuche">
-        </label>
-      </form>
-    </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Menü umschalten">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Bücher</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Vinyls</a>
+            </li>
+            <!-- <li><a href="#">Brettspiele</a></li> -->
+          </ul>
+
+          <form class="d-flex" role="search">
+            <label>
+              <input type="text" placeholder="Volltextsuche" class="form-control me-2" aria-label="Volltextsuche">
+            </label>
+          </form>
+
+        </div>
+      </div>
+    </nav>
 
   </header>
 
@@ -238,7 +251,8 @@
     Made with <span style="color: #be0000;">❤︎</span>
   </footer>
 
-  <script src="/js/app.js"></script>
+  <!--<script src="/js/app.js"></script>-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
 
