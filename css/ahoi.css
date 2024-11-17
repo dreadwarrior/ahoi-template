@@ -1,3 +1,12 @@
+body {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Libre Baskerville", Baskerville, serif;
+}
+
 /* Source: https://www.magentaa11y.com/demos/star-rating/ */
 .rating {
   position: relative;
