@@ -57,6 +57,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* pull up the section following the content section introduction */
-.content-section__introduction + section {
+.content-section__introduction + div > section {
   margin-top: -3rem;
 }
