@@ -55,3 +55,8 @@ h1, h2, h3, h4, h5, h6 {
     transition: all .5s ease-in-out;
   }
 }
+
+/* pull up the card following the content section introduction */
+.content-section__introduction + .card {
+  margin-top: -3rem;
+}

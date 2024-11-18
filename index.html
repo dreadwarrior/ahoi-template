@@ -74,7 +74,7 @@
 
   <main>
 
-    <section class="bg-black text-light py-5">
+    <section class="bg-black text-light py-5 __sticky-top">
       <hgroup class="px-2 text-center">
         <h1 class="fs-6">Ahoi! Ich bin Tommy.</h1>
         <h2 class="display-2">Leseratte<!--, Büchersammler--> &amp; Vinyl-Enthusiast.</h2>
@@ -85,12 +85,12 @@
 
     <article>
 
-      <section class="card bg-black text-white border border-0 rounded-0">
+      <section class="card text-bg-dark border-0 rounded-0 content-section__introduction __sticky-top">
 
         <!-- Mood-Bild mit Buch / Büchern; width x height = n x n * 1.25  -->
         <img class="card-img-top rounded-0" src="https://picsum.photos/id/24/375/469" alt="">
 
-        <div class="card-body">
+        <div class="card-body position-absolute bottom-0 px-4 pb-5 mb-5">
           <h2>Bücher-Neuigkeiten</h2>
 
           <p class="card-text"><a class="card-link" href="/books">Alle Bücher durchstöbern</a></p>
@@ -98,16 +98,20 @@
 
       </section>
 
-      <section class="card bg-black rounded-0 border-0">
-        <div class="card-body bg-white rounded-5 rounded-bottom-0">
-          <h3 class="card-title fs-6">Zuletzt abgeschlossen</h3>
+      <section class="card border-0 rounded-0 rounded-top-4 __sticky-top"><!-- rounded-0 rounded-top-4 für die erste Section, dann rounded-0 für jede weitere -->
+        <div class="card-body px-4 py-5"><!-- py-5 für die erste Section, dann py-0 pb-5 für jede weitere -->
+          <h3 class="card-title fs-6 pb-3">Zuletzt gelesen</h3>
 
-          <hgroup class="card-subtitle">
-            <h4>Shields up, sub-light honor!</h4>
-            <p>von <em>Nunquam pugna</em> (2024)</p>
-          </hgroup>
+          <figure>
+            <img class="d-block mx-auto mb-4" src="https://picsum.photos/id/64/148/240" alt="Abbildung des Buchs „Shields up, sub-light honor!“ von Nunquam pugna">
 
-          <img src="https://picsum.photos/id/64/148/240" alt="Abbildung des Buchs „Shields up, sub-light honor!“ von Nunquam pugna">
+            <figcaption>
+              <hgroup>
+                <h4><a href="#">Shields up, sub-light honor!</a></h4>
+                <p>von <em>Nunquam pugna</em> (2024)</p>
+              </hgroup>
+            </figcaption>
+          </figure>
 
           <!-- Zusammenfassung kann auf Buch-Detailseite angeschaut werden, verlängert Inhalt auf Homepage unnötig.
           <p>The parrot burns with madness, loot the quarter-deck before it rises.</p>
@@ -117,14 +121,23 @@
           -->
 
           <aside>
-            <p><time datetime="2024-11-16">16. November 2024</time></p>
+            <div class="container-fluid px-0">
+              <div class="row justify-content-between">
+                <div class="col order-1 text-end">
+                  <p><time datetime="2024-11-16">16. November 2024</time></p>
+                </div>
 
-            <p class="rating">
-              <span class="rating__scale"></span>
-              <span class="rating__rating"></span>
-              <span class="rating__hidden">Bewertung: 4 von 5 Sternen</span>
-            </p>
+                <div class="col">
+                  <p class="rating">
+                    <span class="rating__scale"></span>
+                    <span class="rating__rating"></span>
+                    <span class="rating__hidden">Bewertung: 4 von 5 Sternen</span>
+                  </p>
+                </div>
+              </div>
+            </div>
 
+            <!-- Detaillierte Bewertung kann auf der Buchdetailseite angeschaut werden.
             <blockquote>
               <h5>Avast there's nothing like the fine courage laughing on the sail.</h5>
               <p>Everything we do is connected with happiness: ascension, awareness, purpose, advice.</p>
@@ -132,53 +145,70 @@
               <p>Why does the sonic shower view?</p>
               <p>This hypnosis has only been controlled by a neutral cosmonaut.</p>
             </blockquote>
+            -->
           </aside>
         </div>
       </section>
 
-      <section>
+      <section class="card border-0 rounded-0 __sticky-top">
 
-        <h3>Neu in der Wunschliste</h3>
+        <div class="card-body px-4 py-0 pb-5">
+          <div class="container-fluid px-0">
+            <div class="row" data-masonry='{"percentPosition": true }'>
+              <div class="col-6">
+                <h3 class="card-title fs-6 pb-3">Neu in der Wunschliste</h3>
+              </div>
 
-        <figure>
-          <a href="#"><img src="https://picsum.photos/id/69/148/240" alt="Abbildung des Buchs „Pars emeritis species est!“ von Pieces o' passion"></a>
-          <figcaption>
-            <hgroup>
-              <h4><a href="#">Pars emeritis species est!</a></h4>
-              <p>von <em>Pieces o' passion</em> (1981)</p>
-            </hgroup>
-          </figcaption>
-        </figure>
+              <div class="col-6">
+                <figure class="border-bottom border-dark-subtle">
+                  <a href="#"><img class="mb-2" src="https://picsum.photos/id/69/148/240" alt="Abbildung des Buchs „Pars emeritis species est!“ von Pieces o' passion" width="148" height="240"></a>
+                  <figcaption>
+                    <hgroup>
+                      <h4 class="fs-6"><a href="#">Pars emeritis species est!</a></h4>
+                      <p>von <em>Pieces o' passion</em> (1981)</p>
+                    </hgroup>
+                  </figcaption>
+                </figure>
+              </div>
 
-        <figure>
-          <a href="#"><img src="https://picsum.photos/id/78/148/240" alt="Abbildung des Buchs „Spiritual moonlights receives most emptinesses!“ von Nuclear flux."></a>
-          <figcaption>
-            <hgroup>
-              <h4><a href="#">Spiritual moonlights receives most emptinesses!</a></h4>
-              <p>von <em>Nuclear flux</em> (2006)</p>
-            </hgroup>
-          </figcaption>
-        </figure>
+              <div class="col-6">
+                <figure class="border-bottom border-dark-subtle">
+                  <a href="#"><img class="mb-2" src="https://picsum.photos/id/78/148/240" alt="Abbildung des Buchs „Spiritual moonlights receives most emptinesses!“ von Nuclear flux." width="148" height="240"></a>
+                  <figcaption>
+                    <hgroup>
+                      <h4 class="fs-6"><a href="#">Spiritual moonlights receives most emptinesses!</a></h4>
+                      <p>von <em>Nuclear flux</em> (2006)</p>
+                    </hgroup>
+                  </figcaption>
+                </figure>
+              </div>
 
-        <figure>
-          <a href="#"><img src="https://picsum.photos/id/88/148/240" alt="Abbildung des Buchs „Die bravely like a twisted planet!“ von Be playful."></a>
-          <figcaption>
-            <hgroup>
-              <h4><a href="#">Die bravely like a twisted planet!</a></h4>
-              <p>von <em>Be playful</em> (1993)</p>
-            </hgroup>
-          </figcaption>
-        </figure>
+              <div class="col-6">
+                <figure class="border-bottom border-dark-subtle">
+                  <a href="#"><img class="mb-2" src="https://picsum.photos/id/88/148/240" alt="Abbildung des Buchs „Die bravely like a twisted planet!“ von Be playful." width="148" height="240"></a>
+                  <figcaption>
+                    <hgroup>
+                      <h4 class="fs-6"><a href="#">Die bravely like a twisted planet!</a></h4>
+                      <p>von <em>Be playful</em> (1993)</p>
+                    </hgroup>
+                  </figcaption>
+                </figure>
+              </div>
 
-        <figure>
-          <a href="#"><img src="https://picsum.photos/id/108/148/240" alt="Abbildung des Buchs „You have to lure“ von Your shining."></a>
-          <figcaption>
-            <hgroup>
-              <h4><a href="#">You have to lure</a></h4>
-              <p>von <em>Your shining</em> (1993)</p>
-            </hgroup>
-          </figcaption>
-        </figure>
+              <div class="col-6">
+                <figure class="border-bottom border-dark-subtle">
+                  <a href="#"><img class="mb-2" src="https://picsum.photos/id/108/148/240" alt="Abbildung des Buchs „You have to lure“ von Your shining." width="148" height="240"></a>
+                  <figcaption>
+                    <hgroup>
+                      <h4 class="fs-6"><a href="#">You have to lure</a></h4>
+                      <p>von <em>Your shining</em> (1993)</p>
+                    </hgroup>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </section>
 
@@ -262,8 +292,9 @@
   </footer>
 
   <!--<script src="/js/app.js"></script>-->
+  <!-- TODO: Für Update-Informationen, zu Feedreader hinzufügen. -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 </body>
 
 </html>
