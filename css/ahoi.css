@@ -1,50 +1,142 @@
 @import "css/rating.css";
 
 body {
+  --ah-padding-vertical: 3rem;
+  --ah-padding-horizontal: 1.5rem;
+
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-}
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Barlow Condensed", sans-serif;
-}
-
-a {
-  text-decoration: none;
-}
-
-.home-section {
-  --ah-home-section-width: 375px;
-
-  width: var(--ah-home-section-width);
-  height: calc(var(--ah-home-section-width) * 1.25); /* ~ width * 1.25 */
-
-  color: #ffffff;
-
-  position: sticky;
-  top: 0;
-  z-index: 1020;
-
-  display: flex;
-  align-items: flex-end;
-
-  padding: 3rem 1.5rem 6rem 1.5rem;
-
-  &.home-section-books {
-    background-image: url("../img/books/armina-arhm-qFAs0F3fk9E-unsplash-hs-sm.jpeg");
-    background-repeat: no-repeat;
-  }
-  &.home-section-vinyls {
-    background-image: url("../img/vinyls/joyce-g-ITVCF_F1_00-unsplash-hs-sm.jpeg");
-    background-repeat: no-repeat;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Barlow Condensed", sans-serif;
   }
 
-  hgroup {
-    flex: 1 0 0;
+  a {
+    text-decoration: none;
   }
-}
 
-/* pull up the section following the content section introduction */
-.content-section__introduction + div > section {
-  margin-top: -3rem;
+  main {
+
+    padding-bottom: var(--ah-padding-vertical);
+    border-bottom: 1px solid #000000;
+
+    .introduction-section {
+      background-color: #000000;
+      color: #ffffff;
+      padding: var(--ah-padding-vertical) var(--ah-padding-horizontal);
+
+      hgroup {
+        text-align: center;
+      }
+
+      img {
+        display: block;
+        width: 50%;
+        margin: var(--ah-padding-vertical) auto;
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+      }
+    }
+
+    .recent {
+      .recent__introduction {
+        --ah-home-section-width: 375px;
+
+        width: var(--ah-home-section-width);
+        height: calc(var(--ah-home-section-width) * 1.25); /* ~ width * 1.25 */
+
+        color: #ffffff;
+
+        position: -webkit-sticky; /* Required for Safari */
+        position: sticky;
+        top: 0;
+        z-index: 1020;
+
+        display: flex;
+        align-items: flex-end;
+
+        padding: var(--ah-padding-vertical) var(--ah-padding-horizontal) calc(2 * var(--ah-padding-vertical)) var(--ah-padding-horizontal);
+
+        background-repeat: no-repeat;
+
+        &.recent__introduction--books {
+          background-image: url("../img/books/armina-arhm-qFAs0F3fk9E-unsplash-hs-sm.jpeg");
+        }
+
+        &.recent__introduction--vinyls {
+          background-image: url("../img/vinyls/joyce-g-ITVCF_F1_00-unsplash-hs-sm.jpeg");
+        }
+
+        .recent__introduction__header {
+          flex: 1 0 0;
+
+          .recent__introduction__headline {
+            font-size: calc(1.625rem + 4.5vw);
+          }
+        }
+
+        /* pull up the section following the content section introduction */
+
+        + div {
+          margin-top: calc(-1 * var(--ah-padding-vertical));
+        }
+      }
+
+      .recent__categories {
+        position: -webkit-sticky; /* Required for Safari */
+        position: sticky;
+        top: 0;
+        z-index: 1020;
+
+        .recent-category {
+          background: #ffffff;
+          padding: var(--ah-padding-vertical) var(--ah-padding-horizontal);
+
+          &:first-child {
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+
+            padding-bottom: 0;
+          }
+
+          .recent-category__header {
+            margin-top: calc(var(--ah-padding-vertical) / 3);
+            margin-bottom: calc(var(--ah-padding-vertical) / 1.5);
+          }
+        }
+      }
+    }
+
+    .collection-item {
+      border-bottom: 1px solid #dee2e6;
+      padding-bottom: calc(var(--ah-padding-vertical) / 6);
+
+      .collection-item__cover {
+        margin: 0 0 calc(var(--ah-padding-vertical) / 3) 0;
+
+        max-width: 100%;
+        height: auto;
+      }
+
+      &.collection-item--discrete {
+        border: none;
+        margin: 0; /* Prevent gap to next category section. */
+        padding: 0;
+
+        .collection-item__cover {
+          display: block;
+          margin: 0 auto var(--ah-padding-horizontal) auto;
+        }
+      }
+
+      .collection-item__creator {
+        display: block;
+      }
+    }
+  }
+
+  footer {
+    padding: calc(var(--ah-padding-vertical) / 2) var(--ah-padding-horizontal);
+  }
 }
