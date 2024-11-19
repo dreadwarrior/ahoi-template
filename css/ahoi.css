@@ -13,6 +13,37 @@ a {
   text-decoration: none;
 }
 
+.home-section {
+  --ah-home-section-width: 375px;
+
+  width: var(--ah-home-section-width);
+  height: calc(var(--ah-home-section-width) * 1.25); /* ~ width * 1.25 */
+
+  color: #ffffff;
+
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 3rem 1.5rem 6rem 1.5rem;
+
+  &.home-section-books {
+    background-image: url("../img/books/armina-arhm-qFAs0F3fk9E-unsplash-hs-sm.jpeg");
+    background-repeat: no-repeat;
+  }
+  &.home-section-vinyls {
+    background-image: url("../img/vinyls/joyce-g-ITVCF_F1_00-unsplash-hs-sm.jpeg");
+    background-repeat: no-repeat;
+  }
+
+  hgroup {
+    flex: 1 0 0;
+  }
+}
+
 /* pull up the section following the content section introduction */
 .content-section__introduction + div > section {
   margin-top: -3rem;
