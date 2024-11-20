@@ -44,6 +44,11 @@ body {
     padding-bottom: var(--ah-padding-vertical);
     border-bottom: 1px solid #000000;
 
+    @media (min-width: 768px) {
+      max-width: 75vw;
+      margin: 0 auto;
+    }
+
     .introduction {
       background-color: #000000;
       color: #ffffff;
