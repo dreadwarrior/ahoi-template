@@ -44,7 +44,7 @@ body {
     padding-bottom: var(--ah-padding-vertical);
     border-bottom: 1px solid #000000;
 
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       max-width: 75vw;
       margin: 0 auto;
     }
