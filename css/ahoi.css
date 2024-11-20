@@ -12,7 +12,31 @@ body {
   }
 
   a {
+    color: #000000;
     text-decoration: none;
+
+    &.button {
+      --ah-btn-color: transparent;
+
+      display: inline-block;
+      padding: calc(var(--ah-padding-vertical) / 8) calc(var(--ah-padding-horizontal) / 2);
+      text-align: center;
+      text-decoration: none;
+      vertical-align: middle;
+      cursor: pointer;
+
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+
+      border: 1px solid var(--ah-btn-color);
+      border-radius: calc(var(--ah-padding-vertical) / 8);
+      background-color: var(--ah-btn-color);
+
+      &.button--light {
+        --ah-btn-color: #ffffff;
+      }
+    }
   }
 
   main {
