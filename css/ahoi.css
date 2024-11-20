@@ -134,7 +134,6 @@ body {
           }
 
           .recent-category__header {
-            margin-top: calc(var(--ah-padding-vertical) / 3);
             margin-bottom: calc(var(--ah-padding-vertical) / 1.5);
           }
         }
