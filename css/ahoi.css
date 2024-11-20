@@ -44,13 +44,22 @@ body {
     padding-bottom: var(--ah-padding-vertical);
     border-bottom: 1px solid #000000;
 
-    .introduction-section {
+    .introduction {
       background-color: #000000;
       color: #ffffff;
       padding: var(--ah-padding-vertical) var(--ah-padding-horizontal);
 
-      hgroup {
+      .introduction__header {
         text-align: center;
+        line-height: 1.2;
+
+        &.introduction__header--greeting {
+          font-size: calc(1.375rem + 1.5vw);
+          font-weight: 300;
+        }
+        &.introduction__header--bio {
+          font-size: calc(1.625rem + 4.5vw);
+        }
       }
 
       img {
