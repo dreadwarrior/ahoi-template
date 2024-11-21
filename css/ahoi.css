@@ -8,7 +8,7 @@ body {
   font-weight: 400;
 
   @media (min-width: 1200px) {
-    max-width: 75vw;
+    max-width: 1200px;
     margin: 0 auto;
   }
 
@@ -111,7 +111,7 @@ body {
         border-radius: 50%;
 
         @media (min-width: 768px) {
-          margin-top: calc(var(--ah-padding-vertical) + 5vw);
+          margin-top: calc(var(--ah-padding-vertical) + 6vw);
         }
 
         grid-column: 2 / 3;
