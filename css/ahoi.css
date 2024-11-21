@@ -125,10 +125,12 @@ body {
 
     .recent {
       .recent__introduction {
-        --ah-home-section-width: 375px;
+        width: auto;
+        aspect-ratio: .8; /* height = width * 1.25 */
 
-        width: var(--ah-home-section-width);
-        height: calc(var(--ah-home-section-width) * 1.25); /* ~ width * 1.25 */
+        @media (min-width: 768px) {
+          aspect-ratio: 21 / 9;
+        }
 
         color: #ffffff;
 
@@ -142,14 +144,12 @@ body {
 
         padding: var(--ah-padding-vertical) var(--ah-padding-horizontal) calc(2 * var(--ah-padding-vertical)) var(--ah-padding-horizontal);
 
-        background-repeat: no-repeat;
-
         &.recent__introduction--books {
-          background-image: url("../img/books/armina-arhm-qFAs0F3fk9E-unsplash-hs-sm.jpeg");
+          background-image: url("../img/introduction-backgrounds/books.jpeg");
         }
 
         &.recent__introduction--vinyls {
-          background-image: url("../img/vinyls/joyce-g-ITVCF_F1_00-unsplash-hs-sm.jpeg");
+          background-image: url("../img/introduction-backgrounds/vinyls.jpeg");
         }
 
         .recent__introduction__header {
