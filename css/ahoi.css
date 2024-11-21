@@ -111,7 +111,7 @@ body {
         border-radius: 50%;
 
         @media (min-width: 768px) {
-          margin-top: calc(var(--ah-padding-vertical) + 6vw);
+          margin-top: calc(var(--ah-padding-vertical) + 6.5vw);
         }
 
         grid-column: 2 / 3;
