@@ -126,7 +126,7 @@ body {
     .recent {
       .recent__introduction {
         width: auto;
-        aspect-ratio: .8; /* height = width * 1.25 */
+        aspect-ratio: 8 / 10; /* height = width * 1.25 */
 
         @media (min-width: 768px) {
           aspect-ratio: 21 / 9;
@@ -143,6 +143,8 @@ body {
         align-items: flex-end;
 
         padding: var(--ah-padding-vertical) var(--ah-padding-horizontal) calc(2 * var(--ah-padding-vertical)) var(--ah-padding-horizontal);
+
+        background-size: cover;
 
         &.recent__introduction--books {
           background-image: url("../img/introduction-backgrounds/books.jpeg");
