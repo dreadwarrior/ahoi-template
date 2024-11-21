@@ -7,6 +7,11 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
 
+  @media (min-width: 1200px) {
+    max-width: 75vw;
+    margin: 0 auto;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: "Barlow Condensed", sans-serif;
   }
@@ -43,11 +48,6 @@ body {
 
     padding-bottom: var(--ah-padding-vertical);
     border-bottom: 1px solid #000000;
-
-    @media (min-width: 992px) {
-      max-width: 75vw;
-      margin: 0 auto;
-    }
 
     .introduction {
       background-color: #000000;
