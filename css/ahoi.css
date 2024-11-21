@@ -2,7 +2,7 @@
 
 body {
   --ah-padding-vertical: 3rem;
-  --ah-padding-horizontal: 1.5rem;
+  --ah-padding-horizontal: calc(1.5rem + 1.5vw);
 
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
