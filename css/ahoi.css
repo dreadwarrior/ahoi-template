@@ -197,6 +197,10 @@ body {
                 grid-column: 1 / 5;
               }
             }
+
+            .item:not(:first-child) {
+              border-bottom: 1px solid #dee2e6;
+            }
           }
 
           &:first-child {
@@ -213,11 +217,8 @@ body {
     }
 
     .collection-item {
-      border-bottom: 1px solid #dee2e6;
-      padding-bottom: calc(var(--ah-padding-vertical) / 6);
-
       .collection-item__cover {
-        margin: 0 0 calc(var(--ah-padding-vertical) / 3) 0;
+        margin-bottom: calc(var(--ah-padding-vertical) / 3);
 
         max-width: 100%;
         height: auto;
@@ -225,9 +226,7 @@ body {
       }
 
       &.collection-item--discrete {
-        border: none;
         margin: 0; /* Prevent gap to next category section. */
-        padding: 0;
 
         .collection-item__cover {
           display: block;
