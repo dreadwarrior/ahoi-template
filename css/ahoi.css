@@ -167,7 +167,6 @@ body {
         }
 
         /* pull up the section following the content section introduction */
-
         + div {
           margin-top: calc(-1 * var(--ah-padding-vertical));
         }
@@ -211,6 +210,7 @@ body {
           }
 
           .recent-category__header {
+            margin-bottom: var(--ah-padding-vertical);
           }
         }
       }
@@ -228,9 +228,30 @@ body {
       &.collection-item--discrete {
         margin: 0; /* Prevent gap to next category section. */
 
-        .collection-item__cover {
-          display: block;
-          margin: 0 auto var(--ah-padding-horizontal) auto;
+        display: grid;
+        gap: var(--ah-padding-horizontal) 1.5rem;
+        grid-gap: var(--ah-padding-horizontal) 1.5rem;
+
+        @media (min-width: 768px) {
+          grid-column: 1 / 6;
+          grid-row: 1 / 2;
+          grid-template-columns: repeat(4, 1fr);
+        }
+
+        .collection-item__link {
+          justify-self: center;
+
+          .collection-item__cover {
+            display: block;
+            margin: 0;
+          }
+        }
+
+        .collection-item__description {
+          @media (min-width: 768px) {
+            align-self: end;
+            grid-column: 2 / 5;
+          }
         }
       }
 
