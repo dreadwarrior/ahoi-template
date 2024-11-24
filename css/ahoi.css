@@ -179,6 +179,22 @@ body {
           background: #ffffff;
           padding: var(--ah-padding-vertical) var(--ah-padding-horizontal);
 
+          &.recent-category--grid {
+            display: grid;
+            grid-gap: 1.5rem;
+            gap: 1.5rem;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: 1.5rem;
+
+            @media (min-width: 768px) {
+              grid-template-columns: 1fr 1fr 1fr 1fr;
+
+              .item:first-child {
+                grid-column: 1 / 5;
+              }
+            }
+          }
+
           &:first-child {
             border-top-left-radius: 1rem;
             border-top-right-radius: 1rem;
@@ -187,7 +203,7 @@ body {
           }
 
           .recent-category__header {
-            margin-bottom: calc(var(--ah-padding-vertical) / 1.5);
+            /*margin-bottom: calc(var(--ah-padding-vertical) / 1.5);*/
           }
         }
       }
