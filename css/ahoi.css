@@ -241,15 +241,14 @@ body {
         display: grid;
         gap: var(--ah-padding-horizontal) 1.5rem;
         grid-gap: var(--ah-padding-horizontal) 1.5rem;
-
-        @media (min-width: 768px) {
-          grid-column: 1 / 6;
-          grid-row: 1 / 2;
-          grid-template-columns: repeat(4, 1fr);
-        }
+        grid-template-columns: repeat(8, 1fr);
 
         .collection-item__link {
-          justify-self: center;
+          grid-column: auto / span 4;
+
+          @media (min-width: 768px) {
+            grid-column: auto / span 3;
+          }
 
           .collection-item__cover {
             display: block;
@@ -258,9 +257,15 @@ body {
         }
 
         .collection-item__description {
+          grid-column: auto / span 4;
+          align-self: end;
+
           @media (min-width: 768px) {
-            align-self: end;
-            grid-column: 2 / 5;
+            grid-column: auto / span 5;
+          }
+
+          a {
+            font-size: calc(1.3rem + .6vw);
           }
         }
       }
