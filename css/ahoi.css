@@ -56,6 +56,16 @@ body {
       color: #ffffff;
     }
 
+    .section-introduction {
+      padding: var(--ah-padding-vertical) var(--ah-padding-horizontal);
+
+      .section-introduction__headline {
+        color: rgb(128,144,199);
+
+        font-size: calc(.675rem + 1.5vw);
+      }
+    }
+
     .introduction {
       padding: var(--ah-padding-vertical) var(--ah-padding-horizontal);
 
@@ -133,6 +143,45 @@ body {
         @media (min-width: 768px) {
           grid-column: 1 / 5;
         }
+      }
+    }
+
+    .bromide { /* Bromide: https://en.wikipedia.org/wiki/Bromide_(language) */
+      padding: var(--ah-padding-vertical) 0;
+      position: relative;
+
+      .bromide__quote {
+        font-size: calc(0.325rem + 4.5vw);
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 600;
+        line-height: 1.2;
+        text-transform: uppercase;
+
+        border-left: 5px solid white;
+        padding-left: calc(var(--ah-padding-horizontal) / 2);
+        margin-left: calc(-1 * (5px + calc(var(--ah-padding-horizontal) / 2)));
+
+        &::before {
+          --quote-indent-factor: 1;
+
+          @media (min-width: 768px) {
+            --quote-indent-factor: calc(-1 * .4);
+          }
+
+          content: '\201C';
+          font-size: calc(5 * (0.325rem + 4.5vw));
+
+          position: absolute;
+          top: calc(var(--quote-indent-factor) * (0.325rem + 4.5vw));
+          left: calc(-.6 * (0.325rem + 4.5vw));
+          opacity: .25;
+        }
+      }
+
+      .bromide__source {
+        text-transform: uppercase;
+        color: rgb(117, 117, 117);
+        font-weight: 600;
       }
     }
 
