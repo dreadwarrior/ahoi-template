@@ -165,6 +165,7 @@ body {
 
         &.recent__introduction--vinyls {
           background-image: url("../img/introduction-backgrounds/vinyls.jpeg");
+          background-position-y: 25%;
         }
 
         .recent__introduction__header {
