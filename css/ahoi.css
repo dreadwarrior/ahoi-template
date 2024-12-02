@@ -139,7 +139,7 @@ body {
     .recent {
       .recent__introduction {
         width: auto;
-        aspect-ratio: 8 / 10; /* height = width * 1.25 */
+        aspect-ratio: 3 / 2;
 
         @media (min-width: 768px) {
           aspect-ratio: 21 / 9;
