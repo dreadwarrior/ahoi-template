@@ -7,6 +7,8 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
 
+  background-color: rgb(244, 244, 244);
+
   h1, h2, h3, h4, h5, h6 {
     font-family: "Barlow Condensed", sans-serif;
   }
@@ -16,6 +18,7 @@ body {
     text-decoration: none;
 
     &.button {
+      --ah-btn-fg-color: #000000;
       --ah-btn-color: transparent;
 
       display: inline-block;
@@ -31,10 +34,16 @@ body {
 
       border: 1px solid var(--ah-btn-color);
       border-radius: calc(var(--ah-padding-vertical) / 8);
+      color: var(--ah-btn-fg-color);
       background-color: var(--ah-btn-color);
 
       &.button--light {
         --ah-btn-color: #ffffff;
+      }
+
+      &.button--dark {
+        --ah-btn-fg-color: #ffffff;
+        --ah-btn-color: #000000;
       }
     }
   }
@@ -296,6 +305,53 @@ body {
             margin-bottom: var(--ah-padding-vertical);
           }
         }
+      }
+    }
+
+    .collection-navigation {
+      position: -webkit-sticky; /* Required for Safari */
+      position: sticky;
+      top: 0;
+
+      z-index: 1020;
+
+      background-color: rgba(244, 244, 244, .2);
+      backdrop-filter: blur(0.5rem);
+      -webkit-backdrop-filter: blur(0.5rem);
+
+      .collection-navigation__menu {
+        list-style: none;
+        margin: unset;
+        padding: calc(var(--ah-padding-vertical) / 2) var(--ah-padding-horizontal);
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(max-content, 1fr));
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(max-content, 1fr);
+        gap: 1.5rem 1.5rem;
+        grid-gap: 1.5rem 1.5rem;
+        overflow-x: auto;
+
+        mask: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0),
+          #000000 var(--ah-padding-horizontal) calc(100% - var(--ah-padding-horizontal)),
+          rgba(0, 0, 0, 0)
+        );
+      }
+    }
+
+    .collection {
+      background-color: #fff;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+      padding: var(--ah-padding-vertical) var(--ah-padding-horizontal);
+
+      z-index: 1019;
+
+      h2[id] { /* TODO: add class */
+        /* vertical-padding(.collection-navigation__menu) + font-size(.button) + vertical-padding(.button) + border-size(.button) */
+        scroll-margin-top: calc(var(--ah-padding-vertical) + 1rem + (var(--ah-padding-vertical) / 4) + 2px);
       }
     }
 

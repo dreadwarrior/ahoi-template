@@ -17,10 +17,17 @@ function resizeAllGridItems() {
   }
 }
 
-function resizeInstance(instance) {
-  item = instance.elements[0];
-  resizeGridItem(item);
+function tocNavigation() {
+  const tocLinks = document.querySelectorAll('.collection-navigation__menu a');
+
+  tocLinks.forEach((it) => it.addEventListener('click', (e) => {
+    it.scrollIntoView({
+      inline: 'center'
+    });
+  }));
 }
+
+tocNavigation();
 
 window.onload = resizeAllGridItems();
 window.addEventListener("resize", resizeAllGridItems);

@@ -31,7 +31,7 @@
 </head>
 
 <body>
-  <header>
+  <header class="bg-white">
     <div class="width-gate">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -86,245 +86,70 @@
     </article>
 
     <div class="width-gate">
-      <article class="recent">
+      <nav class="collection-navigation">
+        <ul class="collection-navigation__menu">
+          <li><a href="#recent-books-wishlist" class="button button--dark">Neu in der Wunschliste</a></li>
+          <li><a href="#" class="button button--dark">Neue Lieblingsbücher</a></li>
+          <li><a href="#" class="button button--dark">Kürzlich abgeschlossen</a></li>
+          <li><a href="#" class="button button--dark">Neue ungelesene Bücher</a></li>
+        </ul>
+      </nav>
 
-        <!-- Contribution HTML: "Foto von <a href="https://unsplash.com/de/@a__arhm?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">armina arhm</a> auf <a href="https://unsplash.com/de/fotos/ein-stapel-bucher-ubereinander-qFAs0F3fk9E?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>" -->
-        <section class="recent__introduction recent__introduction--books">
+      <article class="collection">
+        <section>
+          <h2 id="recent-books-wishlist">Neu in der Wunschliste</h2>
 
-          <hgroup class="recent__introduction__header">
-            <h2 class="recent__introduction__headline">Bücher-Neuigkeiten</h2>
-            <p><a href="books" class="button button--light">Alle Bücher durchstöbern</a></p>
-          </hgroup>
+          <figure class="collection-item">
+            <a href="#" class="collection-item__link"><img class="collection-item__cover"
+                                                           src="https://picsum.photos/id/69/148/240"
+                                                           width="148" height="240"
+                                                           srcset="https://picsum.photos/id/69/148/240 148w,https://picsum.photos/id/69/296/480 296w"
+                                                           sizes="(max-width: 768px) 148px, (min-width: 768px) 296px"
+                                                           alt="Abbildung des Buchs „Pars emeritis species est!“ von Pieces o' passion"></a>
+            <figcaption class="collection-item__description">
+              <p><a href="#">Pars emeritis species est!</a> <small class="collection-item__creator">Pieces o' passion</small></p>
+            </figcaption>
+          </figure>
 
+          <figure class="collection-item">
+            <a href="#" class="collection-item__link"><img class="collection-item__cover"
+                                                           src="https://picsum.photos/id/78/148/240"
+                                                           width="148" height="240"
+                                                           srcset="https://picsum.photos/id/78/148/240 148w,https://picsum.photos/id/78/296/480 296w"
+                                                           sizes="(max-width: 768px) 148px, (min-width: 768px) 296px"
+                                                           alt="Abbildung des Buchs „Spiritual moonlights receives most emptinesses!“ von Nuclear flux."></a>
+            <figcaption class="collection-item__description">
+              <p><a href="#">Spiritual moonlights receives most emptinesses!</a> <small class="collection-item__creator">Nuclear flux</small></p>
+            </figcaption>
+          </figure>
+
+          <figure class="collection-item">
+            <a href="#" class="collection-item__link"><img class="collection-item__cover"
+                                                           src="https://picsum.photos/id/88/148/240"
+                                                           width="148" height="240"
+                                                           srcset="https://picsum.photos/id/88/148/240 148w,https://picsum.photos/id/88/296/480 296w"
+                                                           sizes="(max-width: 768px) 148px, (min-width: 768px) 296px"
+                                                           alt="Abbildung des Buchs „Die bravely like a twisted planet!“ von Be playful."></a>
+            <figcaption class="collection-item__description">
+              <p><a href="#">Die bravely like a twisted planet!</a> <small class="collection-item__creator">Be playful</small></p>
+            </figcaption>
+          </figure>
+
+          <figure class="collection-item">
+            <a href="#" class="collection-item__link"><img class="collection-item__cover"
+                                                           src="https://picsum.photos/id/108/148/240"
+                                                           width="148" height="240"
+                                                           srcset="https://picsum.photos/id/108/148/240 148w,https://picsum.photos/id/108/296/480 296w"
+                                                           sizes="(max-width: 768px) 148px, (min-width: 768px) 296px"
+                                                           alt="Abbildung des Buchs „You have to lure“ von Your shining."></a>
+            <figcaption class="collection-item__description">
+              <p><a href="#">You have to lure</a> <small class="collection-item__creator">Your shining</small></p>
+            </figcaption>
+          </figure>
         </section>
-
-        <div class="recent__categories" role="presentation">
-          <section class="recent-category">
-            <h3 class="recent-category__header">Zuletzt gelesen</h3>
-
-            <figure class="collection-item collection-item--discrete">
-              <a href="#" class="collection-item__link"><img class="collection-item__cover"
-                               src="https://picsum.photos/id/64/148/240"
-                               width="148" height="240"
-                               srcset="https://picsum.photos/id/64/148/240 148w,https://picsum.photos/id/64/296/480 296w"
-                               sizes="(max-width: 768px) 148px, (min-width: 768px) 296px"
-                               alt="Abbildung des Buchs „Shields up, sub-light honor!“ von Nunquam pugna"></a>
-
-              <figcaption class="collection-item__description">
-                <a href="#">Shields up, sub-light honor!</a> <small class="collection-item__creator">Nunquam pugna</small>
-              </figcaption>
-            </figure>
-          </section>
-
-          <section class="recent-category recent-category--grid">
-            <div class="item">
-              <div class="content">
-                <h3 class="recent-category__header">Neu in der Wunschliste</h3>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="content">
-                <figure class="collection-item">
-                  <a href="#" class="collection-item__link"><img class="collection-item__cover"
-                                   src="https://picsum.photos/id/69/148/240"
-                                   width="148" height="240"
-                                   srcset="https://picsum.photos/id/69/148/240 148w,https://picsum.photos/id/69/296/480 296w"
-                                   sizes="(max-width: 768px) 148px, (min-width: 768px) 296px"
-                                   alt="Abbildung des Buchs „Pars emeritis species est!“ von Pieces o' passion"></a>
-                  <figcaption class="collection-item__description">
-                    <p><a href="#">Pars emeritis species est!</a> <small class="collection-item__creator">Pieces o' passion</small></p>
-                  </figcaption>
-                </figure>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="content">
-                <figure class="collection-item">
-                  <a href="#" class="collection-item__link"><img class="collection-item__cover"
-                                   src="https://picsum.photos/id/78/148/240"
-                                   width="148" height="240"
-                                   srcset="https://picsum.photos/id/78/148/240 148w,https://picsum.photos/id/78/296/480 296w"
-                                   sizes="(max-width: 768px) 148px, (min-width: 768px) 296px"
-                                   alt="Abbildung des Buchs „Spiritual moonlights receives most emptinesses!“ von Nuclear flux."></a>
-                  <figcaption class="collection-item__description">
-                    <p><a href="#">Spiritual moonlights receives most emptinesses!</a> <small class="collection-item__creator">Nuclear flux</small></p>
-                  </figcaption>
-                </figure>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="content">
-                <figure class="collection-item">
-                  <a href="#" class="collection-item__link"><img class="collection-item__cover"
-                                   src="https://picsum.photos/id/88/148/240"
-                                   width="148" height="240"
-                                   srcset="https://picsum.photos/id/88/148/240 148w,https://picsum.photos/id/88/296/480 296w"
-                                   sizes="(max-width: 768px) 148px, (min-width: 768px) 296px"
-                                   alt="Abbildung des Buchs „Die bravely like a twisted planet!“ von Be playful."></a>
-                  <figcaption class="collection-item__description">
-                    <p><a href="#">Die bravely like a twisted planet!</a> <small class="collection-item__creator">Be playful</small></p>
-                  </figcaption>
-                </figure>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="content">
-                <figure class="collection-item">
-                  <a href="#" class="collection-item__link"><img class="collection-item__cover"
-                                   src="https://picsum.photos/id/108/148/240"
-                                   width="148" height="240"
-                                   srcset="https://picsum.photos/id/108/148/240 148w,https://picsum.photos/id/108/296/480 296w"
-                                   sizes="(max-width: 768px) 148px, (min-width: 768px) 296px"
-                                   alt="Abbildung des Buchs „You have to lure“ von Your shining."></a>
-                  <figcaption class="collection-item__description">
-                    <p><a href="#">You have to lure</a> <small class="collection-item__creator">Your shining</small></p>
-                  </figcaption>
-                </figure>
-              </div>
-            </div>
-
-          </section>
-        </div>
-
-      </article>
-
-      <article class="recent">
-
-        <!-- Contribution HTML: "Foto von <a href="https://unsplash.com/de/@joyce_?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Joyce G</a> auf <a href="https://unsplash.com/de/fotos/schwarze-schallplatte-auf-silberner-runder-platte-ITVCF_F1_00?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>" -->
-        <section class="recent__introduction recent__introduction--vinyls">
-          <hgroup class="recent__introduction__header">
-            <h2 class="recent__introduction__headline">Vinyl-Neuigkeiten</h2>
-            <p><a href="books" class="button button--light">Alle Vinyls durchstöbern</a></p>
-          </hgroup>
-        </section>
-
-        <div class="recent__categories" role="presentation">
-          <section class="recent-category">
-            <h3 class="recent-category__header">Aktuelle Lieblingsplatte</h3>
-
-            <figure class="collection-item collection-item--discrete">
-              <a href="#" class="collection-item__link"><img class="collection-item__cover"
-                                                             src="https://picsum.photos/id/40/375"
-                                                             width="375" height="375"
-                                                             srcset="https://picsum.photos/id/40/375 375w,https://picsum.photos/id/40/750 750w"
-                                                             sizes="(max-width: 768px) 374px, (min-width: 768px) 375px"
-                                                             alt="Abbildung „Brilliant acceptances respects most silences!“ von With chicories."></a>
-
-              <figcaption class="collection-item__description">
-                <a href="#">Brilliant acceptances respects most silences!</a> <small class="collection-item__creator">With chicories</small>
-              </figcaption>
-            </figure>
-          </section>
-
-          <section class="recent-category recent-category--grid">
-            <div class="item">
-              <div class="content">
-                <h3 class="recent-category__header">Neu in der Wunschliste</h3>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="content">
-                <figure class="collection-item">
-                  <a href="#" class="collection-item__link"><img class="collection-item__cover"
-                                   src="https://picsum.photos/id/95/375"
-                                   width="375" height="375"
-                                   srcset="https://picsum.photos/id/95/375 375w,https://picsum.photos/id/95/750 750w"
-                                   sizes="(max-width: 768px) 375px, (min-width: 768px) 750px"
-                                   alt="Abbildung „Nix, clinias, et urbs“ von With marshmellows."></a>
-                  <figcaption class="collection-item__description">
-                    <p><a href="#">Nix, clinias, et urbs</a> <small class="collection-item__creator">With marshmellows</small></p>
-                  </figcaption>
-                </figure>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="content">
-                <figure class="collection-item">
-                  <a href="#" class="collection-item__link"><img class="collection-item__cover"
-                                   src="https://picsum.photos/id/127/375"
-                                   width="375" height="375"
-                                   srcset="https://picsum.photos/id/127/375 375w,https://picsum.photos/id/127/750 750w"
-                                   sizes="(max-width: 768px) 375px, (min-width: 768px) 750px"
-                                   alt="Abbildung „Heu, byssus!“ von Virtual mermaid."></a>
-                  <figcaption class="collection-item__description">
-                    <p><a href="#">Heu, byssus!</a> <small class="collection-item__creator">Virtual mermaid</small></p>
-                  </figcaption>
-                </figure>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="content">
-                <figure class="collection-item">
-                  <a href="#" class="collection-item__link"><img class="collection-item__cover"
-                                   src="https://picsum.photos/id/137/375"
-                                   width="375" height="375"
-                                   srcset="https://picsum.photos/id/137/375 375w,https://picsum.photos/id/137/750 750w"
-                                   sizes="(max-width: 768px) 375px, (min-width: 768px) 750px"
-                                   alt="Abbildung „Whales fall“ von Salty captains."></a>
-                  <figcaption class="collection-item__description">
-                    <p><a href="#">Whales fall</a> <small class="collection-item__creator">Salty captains</small></p>
-                  </figcaption>
-                </figure>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="content">
-                <figure class="collection-item">
-                  <a href="#" class="collection-item__link"><img class="collection-item__cover"
-                                   src="https://picsum.photos/id/146/375"
-                                   width="375" height="375"
-                                   srcset="https://picsum.photos/id/146/375 375w,https://picsum.photos/id/146/750 750w"
-                                   sizes="(max-width: 768px) 375px, (min-width: 768px) 750px"
-                                   alt="Abbildung „The beauty of cores“ von Chaos is the moon."></a>
-                  <figcaption class="collection-item__description">
-                    <p><a href="#">The beauty of cores</a> <small class="collection-item__creator">Chaos is the moon</small></p>
-                  </figcaption>
-                </figure>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="content">
-                <figure class="collection-item">
-                  <a href="#" class="collection-item__link"><img class="collection-item__cover"
-                                   src="https://picsum.photos/id/159/375"
-                                   width="375" height="375"
-                                   srcset="https://picsum.photos/id/159/375 375w,https://picsum.photos/id/159/750 750w"
-                                   sizes="(max-width: 768px) 375px, (min-width: 768px) 750px"
-                                   alt="Abbildung „Kefir with dried leek for dessert“ von Emitters."></a>
-                  <figcaption class="collection-item__description">
-                    <p><a href="#">Kefir with dried leek for dessert</a> <small class="collection-item__creator">Emitters</small></p>
-                  </figcaption>
-                </figure>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="content">
-                <figure class="collection-item">
-                  <a href="#" class="collection-item__link"><img class="collection-item__cover"
-                                   src="https://picsum.photos/id/167/375"
-                                   width="375" height="375"
-                                   srcset="https://picsum.photos/id/167/375 375w,https://picsum.photos/id/167/750 750w"
-                                   sizes="(max-width: 768px) 375px, (min-width: 768px) 750px"
-                                   alt="Abbildung „Damn yer bilge rat, feed the tobacco“ von Iced tea."></a>
-                  <figcaption class="collection-item__description">
-                    <p><a href="#">Damn yer bilge rat, feed the tobacco</a> <small class="collection-item__creator">Iced tea</small></p>
-                  </figcaption>
-                </figure>
-              </div>
-            </div>
-          </section>
-        </div>
-
+        <aside>
+          <a href="#" class="button button--dark">Wunschliste ansehen</a>
+        </aside>
       </article>
     </div>
   </main>
