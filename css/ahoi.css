@@ -240,10 +240,11 @@ body {
           flex: 1 0 0;
 
           .recent__introduction__headline {
-            font-size: calc(1.625rem + 4.5vw); /* bs:display-1 */
+            font-size: calc(1.525rem + 4.5vw); /* bs:display-3 */
+            text-transform: uppercase;
 
             @media (min-width: 1200px) {
-              font-size: 5rem;
+              font-size: 4rem;
             }
           }
         }
