@@ -150,20 +150,21 @@ body {
 
     .bromide { /* Bromide: https://en.wikipedia.org/wiki/Bromide_(language) */
       --ah-bromide-border: .25rem;
+      --ah-bromide-quote-font-size: calc(1.525rem + 4.5vw); /* = bs:display-3 */
+
+      @media (min-width: 1200px) {
+        --ah-bromide-quote-font-size: 4rem; /* = bs:display-3 */
+      }
 
       margin: unset;
 
       text-transform: uppercase;
 
       .bromide__quote {
-        font-size: calc(1.525rem + 4.5vw); /* = bs:display-3 */
+        font-size: var(--ah-bromide-quote-font-size);
         font-family: "Barlow Condensed", sans-serif;
         font-weight: 600;
         line-height: 1.2;
-
-        @media (min-width: 1200px) {
-          font-size: 4rem; /* = bs:display-3 */
-        }
 
         border-left: var(--ah-bromide-border) solid white;
         padding-left: var(--ah-padding-horizontal);
@@ -172,11 +173,11 @@ body {
 
         &::before {
           content: '\201E';
-          font-size: calc(5 * (1.525rem + 4.5vw));
+          font-size: calc(5 * var(--ah-bromide-quote-font-size));
           opacity: .25;
 
           position: absolute;
-          top: -50%;
+          top: calc(-3.5 * var(--ah-bromide-quote-font-size));
           left: .25rem;
         }
       }
