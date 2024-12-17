@@ -57,9 +57,6 @@ body {
 
   main {
 
-    padding-bottom: var(--ah-padding-vertical);
-    border-bottom: 1px solid #000000;
-
     .primer {
       background-color: #000000;
       color: #ffffff;
@@ -406,6 +403,11 @@ body {
   }
 
   footer {
+    background-color: #ffffff;
+    border-top: 1px solid #000000;
+
     padding: calc(var(--ah-padding-vertical) / 2) var(--ah-padding-horizontal);
+
+    font-size: .8rem;
   }
 }
