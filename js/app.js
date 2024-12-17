@@ -3,16 +3,16 @@
 // - https://css-tricks.com/piecing-together-approaches-for-a-css-masonry-layout/#aa-grid-javascript-manipulated-row-spans
 // - https://medium.com/@andybarefoot/a-masonry-style-layout-using-css-grid-8c663d355ebb
 function resizeGridItem(item) {
-  grid = item.parentNode;
-  rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
-  rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
-  rowSpan = Math.ceil((item.querySelector('.content').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
+  const grid = item.parentNode;
+  const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+  const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+  const rowSpan = Math.ceil((item.querySelector('.content').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
   item.style.gridRowEnd = "span " + rowSpan;
 }
 
 function resizeAllGridItems() {
-  allItems = document.querySelectorAll(".recent-category--grid .item");
-  for (x = 0; x < allItems.length; x++) {
+  const allItems = document.querySelectorAll(".recent-category--grid .item");
+  for (let x = 0; x < allItems.length; x++) {
     resizeGridItem(allItems[x]);
   }
 }
@@ -29,5 +29,5 @@ function tocNavigation() {
 
 tocNavigation();
 
-window.onload = resizeAllGridItems();
+window.addEventListener("load", resizeAllGridItems)
 window.addEventListener("resize", resizeAllGridItems);
