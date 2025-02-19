@@ -27,7 +27,16 @@ function tocNavigation() {
   }));
 }
 
+function handleDialogs() {
+  const modals = document.querySelectorAll('.dialog--modal');
+  modals.forEach(it => {
+    document.querySelector('button[aria-controls=' + it.id + ']').addEventListener('click', e => it.showModal());
+    it.querySelector('button[autofocus]').addEventListener('click', e => it.close());
+  });
+}
+
 tocNavigation();
+handleDialogs();
 
 window.addEventListener("load", resizeAllGridItems)
 window.addEventListener("resize", resizeAllGridItems);
