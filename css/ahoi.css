@@ -18,6 +18,44 @@ body {
     text-decoration: none;
   }
 
+  .review {
+    --ah-review-border: .25rem;
+    --ah-review-quote-font-size: calc(1.525rem + 1.5vw); /* = bs:display-3 */
+
+    margin: unset;
+
+    .review__quote {
+      font-size: var(--ah-review-quote-font-size);
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 600;
+      line-height: 1.2;
+
+      text-transform: uppercase;
+
+      border-left: var(--ah-review-border) solid white;
+      padding-left: var(--ah-padding-horizontal);
+
+      position: relative;
+
+      &::before {
+        content: '\201E';
+        font-size: calc(5 * var(--ah-review-quote-font-size));
+        opacity: .25;
+
+        position: absolute;
+        top: calc(-3.5 * var(--ah-review-quote-font-size));
+        left: .25rem;
+      }
+    }
+
+    .review__source {
+      font-family: "Barlow Condensed", sans-serif;
+
+      color: rgb(117, 117, 117);
+      font-weight: 600;
+    }
+  }
+
   .button {
     --ah-btn-fg-color: #000000;
     --ah-btn-color: transparent;
@@ -430,6 +468,14 @@ body {
       padding: var(--ah-padding-vertical) var(--ah-padding-horizontal) 0 var(--ah-padding-horizontal);
       &:last-of-type {
         padding-bottom: var(--ah-padding-vertical);
+      }
+
+      /* TOOD: refactor "collection" semantics, e.g. "panel" */
+      &.collection--dark {
+        background-color: rgb(227, 227, 227);
+        border-radius: unset;
+        margin: var(--ah-padding-vertical) 0;
+        padding: var(--ah-padding-horizontal) var(--ah-padding-horizontal);
       }
 
       z-index: 1019;
