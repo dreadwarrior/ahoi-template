@@ -84,7 +84,7 @@ body {
       color: #ffffff;
 
       &.primer--cut {
-        background: linear-gradient(180deg, rgb(0, 0, 0) calc(var(--ah-padding-vertical) * 8), rgb(244, 244, 244) calc(var(--ah-padding-vertical) * 8));
+        background: linear-gradient(180deg, rgb(0, 0, 0) calc(8* var(--ah-padding-vertical)), rgb(244, 244, 244) calc(8 * var(--ah-padding-vertical)));
       }
     }
 
@@ -92,10 +92,7 @@ body {
       padding: var(--ah-padding-vertical) var(--ah-padding-horizontal);
 
       &.section-introduction--detail {
-        padding-top: calc(2 * var(--ah-padding-vertical));
-        @media (min-width: 786px) {
-          padding-top: calc(3 * var(--ah-padding-vertical));
-        }
+        padding-top: calc(4 * var(--ah-padding-vertical));
 
         display: grid;
         gap: 1.5rem;
@@ -103,10 +100,14 @@ body {
 
         @media (min-width: 768px) {
           grid-template-columns: 296px auto;
-          grid-template-rows: 1fr 1fr;
+          grid-template-rows: 180px auto;
+
+          .section-detail--title {
+            grid-column: 2 / 3;
+          }
 
           .section-detail--cover {
-            grid-row: auto / span 2;
+            grid-row: 1 / span 2;
           }
 
           .section-detail--excerpt {
