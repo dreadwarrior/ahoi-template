@@ -87,16 +87,12 @@ body {
       color: #ffffff;
 
       &.primer--cut {
-        background: linear-gradient(180deg, rgb(0, 0, 0) calc(8* var(--ah-padding-vertical)), rgb(244, 244, 244) calc(8 * var(--ah-padding-vertical)));
+        background: linear-gradient(180deg, rgb(0, 0, 0) calc(8 * var(--ah-padding-vertical)), rgb(244, 244, 244) calc(8 * var(--ah-padding-vertical)));
       }
     }
 
     .section-introduction {
       padding: var(--ah-padding-vertical) var(--ah-padding-horizontal);
-
-      &.section-introduction-detail {
-        padding-top: calc(2 * var(--ah-padding-vertical));
-      }
 
       .section-introduction__headline {
         color: rgb(128,144,199);
@@ -110,14 +106,51 @@ body {
         margin-bottom: var(--ah-padding-vertical);
       }
 
-      .section-introduction-detail__headline {
-        text-transform: uppercase;
+      &.section-introduction-detail {
+        padding-top: calc(2 * var(--ah-padding-vertical));
+
+        @media (min-width: 768px) {
+          padding-top: calc(4 * var(--ah-padding-vertical));
+
+          display: grid;
+          grid-template-columns: 296px auto;
+          gap: 1.5rem;
+
+          .collection-item {
+            grid-column: 1 / 2;
+            grid-row: 1 / span 3;
+          }
+
+          button[aria-controls="shopping-dialog"] {
+            grid-column: 1 / 2;
+
+            align-self: start;
+            justify-self: start;
+          }
+        }
       }
+
+      .section-introduction-detail__title {
+        grid-column: 2 / 3;
+
+        .section-introduction-detail__title__headline {
+          text-transform: uppercase;
+        }
+      }
+
       .section-introduction-detail__excerpt {
         color: rgb(0, 0, 0);
         padding: var(--ah-padding-vertical) 0;
 
-        .section-introduction-detail__excerpt-headline {
+        @media (min-width: 768px) {
+          padding-top: calc(2 * var(--ah-padding-vertical));
+        }
+
+        grid-column: 2 / 3;
+        grid-row: 2 / span 2;
+        align-self: end;
+
+        .section-introduction-detail__excerpt__headline {
           padding-bottom: calc(.25 * var(--ah-padding-vertical));
         }
       }
