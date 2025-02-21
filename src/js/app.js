@@ -1,3 +1,5 @@
+import '../scss/ahoi.scss';
+
 // Masonry layout with CSS grid.
 // Based on:
 // - https://css-tricks.com/piecing-together-approaches-for-a-css-masonry-layout/#aa-grid-javascript-manipulated-row-spans

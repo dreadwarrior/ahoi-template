@@ -1,4 +1,4 @@
-@import "rating.css";
+@use "rating";
 
 body {
   --ah-padding-vertical: 3rem;
@@ -165,11 +165,11 @@ body {
 
         font-size: calc(.675rem + 1.5vw);
 
+        margin-bottom: var(--ah-padding-vertical);
+
         @media (min-width: 1200px) {
           font-size: 1.75rem; /* small-font-size * 2.8 */
         }
-
-        margin-bottom: var(--ah-padding-vertical);
       }
 
       &.section-introduction-detail {
@@ -208,13 +208,13 @@ body {
         color: rgb(0, 0, 0);
         padding: var(--ah-padding-vertical) 0;
 
-        @media (min-width: 768px) {
-          padding-top: calc(2 * var(--ah-padding-vertical));
-        }
-
         grid-column: 2 / 3;
         grid-row: 2 / span 2;
         align-self: end;
+
+        @media (min-width: 768px) {
+          padding-top: calc(2 * var(--ah-padding-vertical));
+        }
 
         .section-introduction-detail__excerpt__headline {
           padding-bottom: calc(.25 * var(--ah-padding-vertical));
@@ -233,27 +233,27 @@ body {
       grid-row-gap: calc(var(--ah-padding-vertical) / 2);
       row-gap: calc(var(--ah-padding-vertical) / 2);
 
+      position: relative; /* for off-setting the avatar */
+      overflow: hidden;
+
       @media (min-width: 768px) {
         grid-row-gap: var(--ah-padding-vertical);
         row-gap: var(--ah-padding-vertical);
       }
-
-      position: relative; /* for off-setting the avatar */
-      overflow: hidden;
 
       .introduction__greeting {
         color: rgb(128,144,199);
 
         font-size: calc(.675rem + 1.5vw);
 
-        @media (min-width: 1200px) {
-          font-size: 1.75rem; /* small-font-size * 2.8 */
-        }
-
         margin: 0;
 
         grid-column: 1 / 7;
         grid-row: 1 / 2;
+
+        @media (min-width: 1200px) {
+          font-size: 1.75rem; /* small-font-size * 2.8 */
+        }
       }
 
       .introduction__tagline {
@@ -317,13 +317,13 @@ body {
       --ah-bromide-border: .25rem;
       --ah-bromide-quote-font-size: calc(1.525rem + 4.5vw); /* = bs:display-3 */
 
-      @media (min-width: 1200px) {
-        --ah-bromide-quote-font-size: 4rem; /* = bs:display-3 */
-      }
-
       margin: unset;
 
       text-transform: uppercase;
+
+      @media (min-width: 1200px) {
+        --ah-bromide-quote-font-size: 4rem; /* = bs:display-3 */
+      }
 
       .bromide__quote {
         font-size: var(--ah-bromide-quote-font-size);
@@ -362,10 +362,6 @@ body {
         width: auto;
         aspect-ratio: 3 / 2;
 
-        @media (min-width: 768px) {
-          aspect-ratio: 21 / 9;
-        }
-
         color: #ffffff;
 
         position: -webkit-sticky; /* Required for Safari */
@@ -380,12 +376,16 @@ body {
 
         background-size: cover;
 
+        @media (min-width: 768px) {
+          aspect-ratio: 21 / 9;
+        }
+
         &.recent__introduction--books {
-          background-image: url("../img/introduction-backgrounds/books.jpeg");
+          background-image: url("../../img/introduction-backgrounds/books.jpeg");
         }
 
         &.recent__introduction--vinyls {
-          background-image: url("../img/introduction-backgrounds/vinyls.jpeg");
+          background-image: url("../../img/introduction-backgrounds/vinyls.jpeg");
           background-position-y: 25%;
         }
 
@@ -478,10 +478,10 @@ body {
         overflow-x: auto;
 
         mask: linear-gradient(
-          90deg,
-          rgba(0, 0, 0, 0),
-          #000000 var(--ah-padding-horizontal) calc(100% - var(--ah-padding-horizontal)),
-          rgba(0, 0, 0, 0)
+            90deg,
+            rgba(0, 0, 0, 0),
+            #000000 var(--ah-padding-horizontal) calc(100% - var(--ah-padding-horizontal)),
+            rgba(0, 0, 0, 0)
         );
       }
     }
