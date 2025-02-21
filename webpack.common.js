@@ -31,7 +31,15 @@ module.exports = {
           // Translates CSS into CommonJS
           "css-loader",
           // Compiles Sass to CSS
-          "sass-loader",
+          {
+            "loader": "sass-loader",
+            "options": {
+              "sassOptions": {
+                // Mute deprecations for Bootstrap 5.x import.
+                "silenceDeprecations": ["color-functions", "global-builtin", "import", "mixed-decls"]
+              }
+            }
+          },
         ]
       }
     ]
