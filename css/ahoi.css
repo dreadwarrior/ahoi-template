@@ -24,7 +24,7 @@ body {
 
     margin: unset;
 
-    .review__quote {
+    .review__title {
       font-size: var(--ah-review-quote-font-size);
       font-family: "Barlow Condensed", sans-serif;
       font-weight: 600;
@@ -48,7 +48,7 @@ body {
       }
     }
 
-    .review__source {
+    .review__rating {
       font-family: "Barlow Condensed", sans-serif;
 
       color: rgb(117, 117, 117);
@@ -87,6 +87,18 @@ body {
       --ah-btn-fg-color: #ffffff;
       --ah-btn-color: #000000;
     }
+
+    &.button--pill {
+      border-radius: 2rem;
+      border-color: var(--ah-btn-fg-color);
+      background-color: transparent;
+    }
+  }
+
+  .button-group {
+    .button {
+      margin: calc(.25 * var(--ah-padding-vertical)) 0;
+    }
   }
 
   /* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary#changing_the_summarys_icon */
@@ -110,6 +122,21 @@ body {
 
   .dialog--modal {
     background-color: white;
+  }
+
+  .metadata {
+    display: grid;
+    margin: unset;
+    padding: unset;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 4fr 8fr;
+    }
+
+    dt, dd {
+      align-self: center;
+      padding: calc(.25 * var(--ah-padding-horizontal)) 0;
+    }
   }
 
   .width-gate {
