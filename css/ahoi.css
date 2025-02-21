@@ -368,6 +368,7 @@ body {
           .recent__introduction__headline {
             font-size: calc(1.525rem + 4.5vw); /* bs:display-3 */
             text-transform: uppercase;
+            padding-bottom: calc(.25 * var(--ah-padding-horizontal));
 
             @media (min-width: 1200px) {
               font-size: 4rem;
