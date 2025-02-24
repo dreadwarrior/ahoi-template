@@ -1,4 +1,5 @@
 const path = require('path');
+const autoprefixer = require('autoprefixer')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const devMode = process.env.NODE_ENV !== "production";
 
@@ -28,8 +29,19 @@ module.exports = {
           // Creates `style` nodes from JS strings
           // fallback to style-loader in development
           devMode ? "style-loader" : MiniCssExtractPlugin.loader,
-          // Translates CSS into CommonJS
+          // Interprets `@import` and `url()` like `import/require()` and will resolve them
           "css-loader",
+          {
+            // Loader for webpack to process CSS with PostCSS
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  autoprefixer
+                ]
+              }
+            }
+          },
           // Compiles Sass to CSS
           {
             "loader": "sass-loader",
