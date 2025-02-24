@@ -1,4 +1,5 @@
 import '../scss/ahoi.scss';
+import Collapse from 'bootstrap/js/dist/collapse'; // FIXME: remove when reworking navbar
 
 // Masonry layout with CSS grid.
 // Based on:
