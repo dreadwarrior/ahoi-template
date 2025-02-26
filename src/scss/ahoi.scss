@@ -166,7 +166,7 @@ body {
       grid-template-columns: 4fr 8fr;
     }
 
-    dt, dd {
+    .metadata__title, .metadata__content {
       align-self: center;
       padding: calc(.25 * var(--ah-padding-horizontal)) 0;
     }
