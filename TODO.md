@@ -1,0 +1,17 @@
+- activate issues
+- implement fulltext search
+- implement list page
+  - 8 items
+  - no endless scrolling
+  - use pagination
+  - masonry
+  - title and author
+- remove buy button
+- reserved
+  - similar to kleinanzeigen
+  - lightened overlay with dark text
+  - icon (flag / cross)
+  - make text color of links to book lighter
+- Publishing year on detail page
+- randomizer (on unread list / wishlist)
+- topic list page
