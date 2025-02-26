@@ -43,7 +43,6 @@ body {
 
   a {
     color: #000000;
-    text-decoration: none;
   }
 
   .review {
@@ -567,6 +566,10 @@ body {
     }
 
     .collection-item {
+      a {
+        text-decoration: none;
+      }
+
       .collection-item__cover {
         margin-bottom: calc(var(--ah-padding-vertical) / 3);
 
