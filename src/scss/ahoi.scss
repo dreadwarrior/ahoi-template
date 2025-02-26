@@ -122,7 +122,7 @@ body {
 
   .button-group {
     .button {
-      margin: calc(.25 * var(--ah-padding-vertical)) 0;
+      margin: calc(.125 * var(--ah-padding-vertical)) calc(.09375 * var(--ah-padding-horizontal));
     }
   }
 
