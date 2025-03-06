@@ -1,0 +1,50 @@
+.button {
+  --ah-btn-fg-color: #000000;
+  --ah-btn-color: transparent;
+
+  display: inline-block;
+  padding: calc(var(--ah-padding-vertical) / 8) calc(var(--ah-padding-horizontal) / 2);
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+
+  border: 1px solid var(--ah-btn-color);
+  color: var(--ah-btn-fg-color);
+  background-color: var(--ah-btn-color);
+
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.25rem;
+
+  &--light {
+    --ah-btn-color: #ffffff;
+  }
+
+  &--dark {
+    --ah-btn-fg-color: #ffffff;
+    --ah-btn-color: #000000;
+  }
+
+  &--pill {
+    border-radius: 2rem;
+    border-color: var(--ah-btn-fg-color);
+    background-color: transparent;
+  }
+  &--link {
+    border: none;
+    background: none;
+    padding: unset;
+    text-transform: unset;
+  }
+}
+
+.button-group {
+  .button {
+    margin: calc(.125 * var(--ah-padding-vertical)) calc(.09375 * var(--ah-padding-horizontal));
+  }
+}

@@ -14,14 +14,14 @@ function resizeGridItem(item) {
 }
 
 function resizeAllGridItems() {
-  const allItems = document.querySelectorAll(".recent-category--grid .item");
+  const allItems = document.querySelectorAll(".masonry-items-list .masonry-items-list__item");
   for (let x = 0; x < allItems.length; x++) {
     resizeGridItem(allItems[x]);
   }
 }
 
 function tocNavigation() {
-  const tocLinks = document.querySelectorAll('.collection-navigation__menu a');
+  const tocLinks = document.querySelectorAll('.panel-navigation__menu a');
 
   tocLinks.forEach((it) => it.addEventListener('click', (e) => {
     it.scrollIntoView({
@@ -30,16 +30,7 @@ function tocNavigation() {
   }));
 }
 
-function handleDialogs() {
-  const modals = document.querySelectorAll('.dialog--modal');
-  modals.forEach(it => {
-    document.querySelector('button[aria-controls=' + it.id + ']').addEventListener('click', e => it.showModal());
-    it.querySelector('button[autofocus]').addEventListener('click', e => it.close());
-  });
-}
-
 tocNavigation();
-handleDialogs();
 
 window.addEventListener("load", resizeAllGridItems)
 window.addEventListener("resize", resizeAllGridItems);
