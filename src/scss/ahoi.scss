@@ -408,6 +408,8 @@ a {
 .recent-standout {
   background: #ffffff;
   padding: var(--ah-padding-vertical) var(--ah-padding-horizontal);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 
   .recent-standout__item {
     margin: 0; /* Prevent gap to next category section. */
