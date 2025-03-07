@@ -138,6 +138,7 @@ a {
   color: rgb(128,144,199);
 
   font-size: calc(.675rem + 1.5vw);
+  font-family: "Barlow Condensed",sans-serif;
 
   margin-bottom: var(--ah-padding-vertical);
 
@@ -453,7 +454,7 @@ a {
   @media (min-width: 786px) {
     grid-column: auto / span 2;
 
-    &:first-child {
+    &--headline {
       grid-column: auto / span 8;
     }
   }
