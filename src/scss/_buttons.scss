@@ -28,6 +28,10 @@
   &--dark {
     --ah-btn-fg-color: #ffffff;
     --ah-btn-color: #000000;
+
+    &-active {
+      filter: invert(.75);
+    }
   }
 
   &--pill {
