@@ -586,6 +586,29 @@ a {
   display: block;
 }
 
+@counter-style a {
+  system: extends decimal;
+  prefix: "A";
+  suffix: "    ";
+}
+
+@counter-style b {
+  system: extends decimal;
+  prefix: "B";
+  suffix: "    ";
+}
+
+.tracklist {
+}
+
+.tracklist--side-a {
+  list-style: a;
+}
+
+.tracklist--side-b {
+  list-style: b;
+}
+
 footer {
   background-color: #ffffff;
   border-top: 1px solid #000000;
