@@ -90,7 +90,7 @@
       <div class="width-gate">
         <article class="collection-item-detail">
           <hgroup class="collection-item-detail__title">
-            <h1 class="collection-item-detail__title__headline">The Waste Land</h1>
+            <h1 class="collection-item-detail__title__headline" data-pagefind-meta="title">The Waste Land</h1>
             <p data-pagefind-meta="autor*in">Miss Enedina Heidenreich</p>
           </hgroup>
 
@@ -139,11 +139,11 @@
 
           <dt class="metadata__title">Themen</dt>
           <dd class="metadata__content">
-            <nav class="button-group">
+            <div role="navigation" class="button-group"><!-- FIXME: unpromoted from <nav /> to let pagefind index the keywords  -->
               <a href="#" class="button button--light button--pill">Folklore</a>
               <a href="#" class="button button--light button--pill">Science fiction</a>
               <a href="#" class="button button--light button--pill">Textbook</a>
-            </nav>
+            </div>
           </dd>
 
           <dt class="metadata__title">ISBN</dt>
