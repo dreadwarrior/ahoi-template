@@ -56,14 +56,28 @@
               <!-- <li><a href="#">Brettspiele</a></li> -->
             </ul>
 
-            <!--
-            <form class="d-flex" role="search">
-              <label>
-                <input type="text" placeholder="Volltextsuche" class="form-control me-2" aria-label="Volltextsuche">
-              </label>
-            </form>
-            -->
-            <div id="search" class="d-flex" role="search"></div>
+            <ul class="navbar-nav me-a">
+              <li class="nav-item">
+                <button type="button" class="button button--dark" data-bs-toggle="modal" data-bs-target="#search-modal">
+                  <i class="bi bi-search"></i> Suche
+                </button>
+              </li>
+            </ul>
+
+            <div class="modal" id="search-modal" tabindex="-1" aria-labelledby="search-modal-label" aria-hidden="true">
+              <div class="modal-dialog modal-fullscreen-lg-down modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title" id="search-modal-label">Volltextsuche</h1>
+                    <button type="button" class="button button--dark btn-close" data-bs-dismiss="modal" aria-label="Schließen"><i class="bi bi-x-lg"></i></button>
+                  </div>
+
+                  <div class="modal-body">
+                    <div id="search" class="d-flex" role="search"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
           </div>
         </div>
@@ -357,7 +371,7 @@
   <script>
     window.addEventListener('DOMContentLoaded', (event) => {
       new PagefindUI({ element: "#search", showSubResults: true, translations: {
-          placeholder: "Volltextsuche",
+          placeholder: "Suchbegriff(e)",
           clear_search: "Zurücksetzen",
           load_more: "Weitere Ergebnisse laden",
           search_label: "Seite durchsuchen",

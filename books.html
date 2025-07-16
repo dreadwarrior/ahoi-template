@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="pagefind/pagefind-ui.css">
 
   <meta name="description" content="">
 
@@ -55,11 +56,28 @@
               <!-- <li><a href="#">Brettspiele</a></li> -->
             </ul>
 
-            <form class="d-flex" role="search">
-              <label>
-                <input type="text" placeholder="Volltextsuche" class="form-control me-2" aria-label="Volltextsuche">
-              </label>
-            </form>
+            <ul class="navbar-nav me-a">
+              <li class="nav-item">
+                <button type="button" class="button button--dark" data-bs-toggle="modal" data-bs-target="#search-modal">
+                  <i class="bi bi-search"></i> Suche
+                </button>
+              </li>
+            </ul>
+
+            <div class="modal" id="search-modal" tabindex="-1" aria-labelledby="search-modal-label" aria-hidden="true">
+              <div class="modal-dialog modal-fullscreen-lg-down modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title" id="search-modal-label">Volltextsuche</h1>
+                    <button type="button" class="button button--dark btn-close" data-bs-dismiss="modal" aria-label="Schließen"><i class="bi bi-x-lg"></i></button>
+                  </div>
+
+                  <div class="modal-body">
+                    <div id="search" role="search"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
           </div>
         </div>
@@ -215,6 +233,24 @@
   </div>
 
   <script src="js/app.js"></script>
+  <script src="pagefind/pagefind-ui.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      new PagefindUI({ element: "#search", showSubResults: true, translations: {
+          placeholder: "Suchbegriff(e)",
+          clear_search: "Zurücksetzen",
+          load_more: "Weitere Ergebnisse laden",
+          search_label: "Seite durchsuchen",
+          filters_label: "Filter",
+          "zero_results": "Keine Ergebnisse gefunden für [SEARCH_TERM]",
+          "many_results": "[COUNT] Ergebnisse für [SEARCH_TERM]",
+          "one_result": "[COUNT] Ergebnis für [SEARCH_TERM]",
+          "alt_search": "Keine Ergebnisse für [SEARCH_TERM] gefunden. Zeige stattdessen Ergebnisse für [DIFFERENT_TERM].",
+          "search_suggestion": "Keine Ergebnisse für [SEARCH_TERM] gefunden. Probiere folgende Stichwörter:",
+          "searching": "Suche nach [SEARCH_TERM]..."
+        } });
+    });
+  </script>
 </body>
 
 </html>
