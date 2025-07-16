@@ -1,0 +1,9 @@
+.navbar-search {
+  position: absolute;
+  top: .5rem;
+  right: 5rem;
+
+  @media (min-width: 991px) {
+    right: 0;
+  }
+}

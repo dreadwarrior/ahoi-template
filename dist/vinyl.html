@@ -40,6 +40,27 @@
             Ahoi.
           </a>
 
+          <div class="navbar-search">
+            <button type="button" class="button button--dark" data-bs-toggle="modal" data-bs-target="#search-modal">
+              <i class="bi bi-search"></i> Suche
+            </button>
+
+            <div class="modal" id="search-modal" tabindex="-1" aria-labelledby="search-modal-label" aria-hidden="true">
+              <div class="modal-dialog modal-fullscreen-lg-down modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title" id="search-modal-label">Volltextsuche</h1>
+                    <button type="button" class="button button--dark btn-close" data-bs-dismiss="modal" aria-label="Schließen"><i class="bi bi-x-lg"></i></button>
+                  </div>
+
+                  <div class="modal-body">
+                    <div id="search" class="d-flex" role="search"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Menü umschalten">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -56,30 +77,8 @@
               <!-- <li><a href="#">Brettspiele</a></li> -->
             </ul>
 
-            <ul class="navbar-nav me-a">
-              <li class="nav-item">
-                <button type="button" class="button button--dark" data-bs-toggle="modal" data-bs-target="#search-modal">
-                  <i class="bi bi-search"></i> Suche
-                </button>
-              </li>
-            </ul>
-
-            <div class="modal" id="search-modal" tabindex="-1" aria-labelledby="search-modal-label" aria-hidden="true">
-              <div class="modal-dialog modal-fullscreen-lg-down modal-dialog-scrollable">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title" id="search-modal-label">Volltextsuche</h1>
-                    <button type="button" class="button button--dark btn-close" data-bs-dismiss="modal" aria-label="Schließen"><i class="bi bi-x-lg"></i></button>
-                  </div>
-
-                  <div class="modal-body">
-                    <div id="search" role="search"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </div>
+
         </div>
       </nav>
     </div>
