@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Ahoi. / Vinyls</title>
+  <title>Ahoi. / Vinyl / „A Summer Bird-Cage“ von Journey</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,7 +69,7 @@
 
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link" href="books.html">Bücher</a>
+                <a class="nav-link active" href="books.html">Bücher</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="vinyls.html">Vinyls</a>
@@ -84,101 +84,108 @@
     </div>
   </header>
 
-  <main>
+  <main data-pagefind-body>
 
-    <article class="primer">
+    <div class="primer primer--cut">
       <div class="width-gate">
-        <section class="section-introduction">
-          <h1 class="section-introduction__headline">Vinyls</h1>
+        <article class="collection-item-detail collection-item-detail--flagged">
+          <hgroup class="collection-item-detail__title">
+            <h1 class="collection-item-detail__title__headline" data-pagefind-meta="title">A Summer Bird-Cage</h1>
+            <p data-pagefind-meta="künstler*in">Journey</p>
+          </hgroup>
 
-          <figure class="bromide">
-            <blockquote class="bromide__quote">
-              Es schwinden jedes Kummers Falten, solang des Liedes Zauber walten.
-            </blockquote>
-            <figcaption class="bromide__source">Friedrich von Schiller (1759 - 1805)</figcaption>
-          </figure>
-        </section>
+          <div class="collection-item-detail__cover-wrapper collection-item-detail__cover-wrapper--reserved">
+            <img class="cover"
+                 src="https://picsum.photos/id/95/148"
+                 width="222" height="222"
+                 srcset="https://picsum.photos/id/95/222 222w,https://picsum.photos/id/95/296 296w"
+                 sizes="(max-width: 768px) 222px, (min-width: 768px) 296px"
+                 alt="Abbildung der Platte „A Summer Bird-Cage“ von Journey">
+          </div>
+
+
+          <div class="collection-item-detail__excerpt">
+            <h2 class="collection-item-detail__excerpt__headline">Tracklisting</h2>
+
+            <ol class="tracklist tracklist--side-a">
+              <li>An Evil Cradling</li>
+              <li>Beyond the Mexique Bay</li>
+              <li>Waiting for the Barbarians</li>
+              <li>In Death Ground</li>
+              <li>The Moving Finger</li>
+            </ol>
+
+            <ol class="tracklist tracklist--side-b">
+              <li>An Evil Cradling</li>
+              <li>Beyond the Mexique Bay</li>
+              <li>Waiting for the Barbarians</li>
+              <li>In Death Ground</li>
+              <li>The Moving Finger</li>
+            </ol>
+          </div>
+        </article>
       </div>
-    </article>
+    </div>
 
     <div class="width-gate">
-      <nav class="sub-section-navigation">
-        <ul class="sub-section-navigation__menu">
-          <li><a href="vinyls-list.html" class="button button--dark">Wunschliste</a></li>
-          <li><a href="vinyl.html" class="button button--dark">Aktuelle Lieblingsplatte</a></li>
-          <li><a href="vinyls-list.html" class="button button--dark">Alle Platten</a></li>
-        </ul>
-      </nav>
+      <article class="panel panel--dark" data-pagefind-ignore>
+        <h2>Rezension</h2>
 
-      <article class="panel">
-        <section class="items-list">
-          <h2 class="items-list__headline">Neu in der Wunschliste</h2>
-
-          <figure class="items-list__item">
-            <a href="vinyl.html"><img class="cover"
-                             src="https://picsum.photos/id/95/375"
-                             width="375" height="375"
-                             srcset="https://picsum.photos/id/95/375 375w,https://picsum.photos/id/95/750 750w"
-                             sizes="(max-width: 768px) 375px, (min-width: 768px) 750px"
-                             alt="Abbildung „A Summer Bird-Cage“ von Journey."></a>
-            <figcaption class="items-list__item__caption">
-              <p><a href="vinyl.html">A Summer Bird-Cage</a> <small
-                class="items-list__item__caption__creator">Journey</small></p>
-            </figcaption>
-          </figure>
-
-          <figure class="items-list__item items-list__item--flagged">
-            <a href="vinyl-reserved.html" class="items-list__item__link items-list__item__link--reserved"><img class="cover"
-                             src="https://picsum.photos/id/127/375"
-                             width="375" height="375"
-                             srcset="https://picsum.photos/id/127/375 375w,https://picsum.photos/id/127/750 750w"
-                             sizes="(max-width: 768px) 375px, (min-width: 768px) 750px"
-                             alt="Abbildung „Heu, byssus!“ von Virtual mermaid."></a>
-            <figcaption class="items-list__item__caption">
-              <p><a href="vinyl-reserved.html" class="items-list__item__caption__link">Heu, byssus!</a> <small class="items-list__item__caption__creator">Virtual
-                mermaid</small></p>
-            </figcaption>
-          </figure>
-
-          <figure class="items-list__item">
-            <a href="vinyl.html"><img class="cover"
-                             src="https://picsum.photos/id/137/375"
-                             width="375" height="375"
-                             srcset="https://picsum.photos/id/137/375 375w,https://picsum.photos/id/137/750 750w"
-                             sizes="(max-width: 768px) 375px, (min-width: 768px) 750px"
-                             alt="Abbildung „Whales fall“ von Salty captains."></a>
-            <figcaption class="items-list__item__caption">
-              <p><a href="vinyl.html">Whales fall</a> <small class="items-list__item__caption__creator">Salty
-                captains</small></p>
-            </figcaption>
-          </figure>
-
-          <figure class="items-list__item">
-            <a href="vinyl.html"><img class="cover"
-                             src="https://picsum.photos/id/146/375"
-                             width="375" height="375"
-                             srcset="https://picsum.photos/id/146/375 375w,https://picsum.photos/id/146/750 750w"
-                             sizes="(max-width: 768px) 375px, (min-width: 768px) 750px"
-                             alt="Abbildung „The beauty of cores“ von Chaos is the moon."></a>
-            <figcaption class="items-list__item__caption">
-              <p><a href="vinyl.html">The beauty of cores</a> <small class="items-list__item__caption__creator">Chaos is
-                the moon</small></p>
-            </figcaption>
-          </figure>
-        </section>
+        <figure class="review">
+          <blockquote class="review__title">
+            Stella! Another one of these damn kids jumped in front of my car! Come on out here! Help me take him in the house!
+          </blockquote>
+          <p>Confucius says: i become and i convert. i fail and i disturb. i listen and i contact. As i have trapped you, so you must desire one another.</p>
+          <p>Everyone just loves the asperity of strawberries chili soakd with green curry. Wow, wet strength! Where is the lunar captain?</p>
+          <figcaption class="review__rating">Bewertung: 4,5 von 5</figcaption>
+        </figure>
       </article>
 
+      <article class="panel panel--dark">
+        <h2>Infos</h2>
+        <dl class="metadata">
+          <dt class="metadata__title">Liste</dt>
+          <dd class="metadata__content">Wunschliste</dd>
+
+          <dt class="metadata__title">Genre &amp; Stil</dt>
+          <dd class="metadata__content">
+            <div role="navigation" class="button-group"><!-- FIXME: unpromoted from <nav /> to let pagefind index the keywords  -->
+              <a href="#" class="button button--light button--pill">Rock</a>
+              <a href="#" class="button button--light button--pill">Sludge Metal</a>
+              <a href="#" class="button button--light button--pill">Doom Metal</a>
+              <a href="#" class="button button--light button--pill">Psychedelic Rock</a>
+            </div>
+          </dd>
+
+          <dt class="metadata__title">Barcode</dt>
+          <dd class="metadata__content">8 84388 87447 3</dd>
+
+          <dt class="metadata__title">Jahr der Veröffentlichung</dt>
+          <dd class="metadata__content">2023</dd>
+
+          <dt class="metadata__title">Quellenangaben</dt>
+          <dd class="metadata__content">
+            <nav class="button-group">
+              <a href="#" class="button button--light button--link"><i class="bi bi-link-45deg"></i> Daten der Veröffentlichung</a>
+              <a href="#" class="button button--light button--link"><i class="bi bi-link-45deg"></i> Cover-Abbildung</a>
+            </nav>
+          </dd>
+        </dl>
+      </article>
+    </div>
+
+    <div class="width-gate" data-pagefind-ignore>
       <article class="panel">
         <section class="items-list">
-          <h2 class="items-list__headline">Neu in der Sammlung</h2>
+          <h2 class="items-list__headline">Ähnliche Vinyls</h2>
 
           <figure class="items-list__item">
             <a href="vinyl.html"><img class="cover"
-                             src="https://picsum.photos/id/159/375"
-                             width="375" height="375"
-                             srcset="https://picsum.photos/id/159/375 375w,https://picsum.photos/id/159/750 750w"
-                             sizes="(max-width: 768px) 375px, (min-width: 768px) 750px"
-                             alt="Abbildung „Kefir with dried leek for dessert“ von Emitters."></a>
+                                      src="https://picsum.photos/id/159/375"
+                                      width="375" height="375"
+                                      srcset="https://picsum.photos/id/159/375 375w,https://picsum.photos/id/159/750 750w"
+                                      sizes="(max-width: 768px) 375px, (min-width: 768px) 750px"
+                                      alt="Abbildung „Kefir with dried leek for dessert“ von Emitters."></a>
             <figcaption class="items-list__item__caption">
               <p><a href="vinyl.html">Kefir with dried leek for dessert</a> <small
                 class="items-list__item__caption__creator">Emitters</small></p>
@@ -187,11 +194,11 @@
 
           <figure class="items-list__item">
             <a href="vinyl.html"><img class="cover"
-                             src="https://picsum.photos/id/167/375"
-                             width="375" height="375"
-                             srcset="https://picsum.photos/id/167/375 375w,https://picsum.photos/id/167/750 750w"
-                             sizes="(max-width: 768px) 375px, (min-width: 768px) 750px"
-                             alt="Abbildung „Damn yer bilge rat, feed the tobacco“ von Iced tea."></a>
+                                      src="https://picsum.photos/id/167/375"
+                                      width="375" height="375"
+                                      srcset="https://picsum.photos/id/167/375 375w,https://picsum.photos/id/167/750 750w"
+                                      sizes="(max-width: 768px) 375px, (min-width: 768px) 750px"
+                                      alt="Abbildung „Damn yer bilge rat, feed the tobacco“ von Iced tea."></a>
             <figcaption class="items-list__item__caption">
               <p><a href="vinyl.html">Damn yer bilge rat, feed the tobacco</a> <small
                 class="items-list__item__caption__creator">Iced tea</small></p>
@@ -200,6 +207,7 @@
         </section>
       </article>
     </div>
+
   </main>
 
   <div class="width-gate">
