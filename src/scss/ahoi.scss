@@ -344,10 +344,11 @@ a {
     }
   }
 
+  .bromide__source, .bromide__source__link {
+    color: rgb(117, 117, 117);
+  }
   .bromide__source {
     font-family: "Barlow Condensed", sans-serif;
-
-    color: rgb(117, 117, 117);
     font-weight: 600;
 
     padding-left: calc(var(--ah-bromide-border) + var(--ah-padding-horizontal));
@@ -617,21 +618,20 @@ a {
   filter: brightness(.75) contrast(.75);
 }
 
-.items-list__item__link--reserved::before {
-   content: '';
-   position: absolute;
-   inset: 0;
-   background: rgba(255, 255, 255, 0.35);
-   z-index: 1;
-   pointer-events: none;
- }
+.items-list__item__link--flagged::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.35);
+  z-index: 1;
+  pointer-events: none;
+}
 
-.items-list__item__link--reserved::after {
+.items-list__item__link--flagged::after {
   font-family: $bootstrap-icons-font, "Montserrat", sans-serif;
   font-size: 1.25rem;
   color: white;
 
-  content: '\F3CB' '\A' 'reserviert';
   white-space: pre;
   text-align: center;
 
@@ -641,6 +641,22 @@ a {
   transform: translate(-50%, -50%);
   z-index: 2;
   pointer-events: none;
+}
+
+.items-list__item__link--reserved::after {
+  content: '\F3CB' '\A' 'reserviert';
+}
+
+.items-list__item__link--completed::after {
+  content: '\F26A' '\A' 'abgeschlossen';
+}
+
+.items-list__item__link--unread::after {
+  content: '\F2CC' '\A' 'zu lesen';
+}
+
+.items-list__item__link--heard::after {
+  content: '\F4A0' '\A' 'angehört';
 }
 
 .items-list__item__caption {
