@@ -1,0 +1,13 @@
+{
+  "books": [
+    {
+      "title": "The Waste Land",
+      "permalink": "book.html",
+      "cover": {
+        "url": "https://picsum.photos/id/69/296/480",
+        "width": 296,
+        "height": 480
+      }
+    }
+  ]
+}

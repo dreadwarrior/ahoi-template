@@ -1,0 +1,48 @@
+.dialog {
+  border: none;
+
+  padding: 1rem;
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  &__content {
+    &--centered {
+      text-align: center;
+    }
+  }
+
+  header {
+    display: flex;
+    gap: 2rem;
+
+    padding-bottom: .5rem;
+    border-bottom: 1px solid black;
+    margin-bottom: .5rem;
+  }
+
+  &__title {
+    margin-bottom: unset !important;
+    margin-top: unset !important;
+    margin-right: auto;
+
+    text-align: left;
+  }
+
+  &__navigation {
+    display: flex;
+    flex-flow: row wrap;
+    gap: .5rem;
+    justify-content: center;
+
+
+    @media screen and (min-width: 768px) {
+      justify-content: flex-end;
+    }
+
+    margin-top: .5rem;
+    border-top: 1px solid black;
+    padding-top: .5rem;
+  }
+}

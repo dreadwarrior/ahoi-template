@@ -1,4 +1,5 @@
 import '../scss/ahoi.scss';
+import { chooseBook } from "./collection-item-chooser";
 import Collapse from 'bootstrap/js/dist/collapse'; // FIXME: remove when reworking navbar
 import Modal from 'bootstrap/js/dist/modal';
 
@@ -32,6 +33,7 @@ function tocNavigation() {
 }
 
 tocNavigation();
+chooseBook('#random-book-chooser');
 
 window.addEventListener("load", resizeAllGridItems)
 window.addEventListener("resize", resizeAllGridItems);
